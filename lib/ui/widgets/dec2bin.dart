@@ -13,21 +13,27 @@ class Dec2Bin extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(8.0),
             alignment: Alignment.centerRight,
-            // TODO: Usa Consumer para mostrar value.decimal y que este widget reaccione a cambios en el proveedor
-            child: Text(
-              value.decimal,
-              textAlign: TextAlign.right,
-              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 35),
+            // TODO:  Usa Consumer para mostrar value.decimal y que este widget reaccione a cambios en el proveedor
+            child: Consumer<ConvertionModel>(
+              builder: (context, value, child) => Text(
+                value.decimal,
+                textAlign: TextAlign.right,
+                style:
+                    const TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
+              ),
             ),
           ),
           Container(
             padding: const EdgeInsets.all(8.0),
             alignment: Alignment.centerRight,
-            // TODO: Usa Consumer para mostrar value.decimal y que este widget reaccione a cambios en el proveedor
-            child: Text(
-              value.binary,
-              textAlign: TextAlign.right,
-              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 35),
+            // TODO: OK Usa Consumer para mostrar value.decimal y que este widget reaccione a cambios en el proveedor
+            child: Consumer<ConvertionModel>(
+              builder: (context, value, child) => Text(
+                value.binary,
+                textAlign: TextAlign.right,
+                style:
+                    const TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
+              ),
             ),
           ),
           Expanded(
@@ -47,9 +53,11 @@ class Dec2Bin extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    // TODO: Llama al metodo updateBinary del proveedor con un valor de 1.
+                    // TODO: OK Llama al metodo updateBinary del proveedor con un valor de 1.
                     // TODO-HINT: Usa Provider.of(context, listen:false)
-                    onPressed: () {},
+                    onPressed: () =>
+                        Provider.of<ConvertionModel>(context, listen: false)
+                            .updateDecimal(1),
                   ),
                 )),
                 Expanded(
@@ -64,9 +72,11 @@ class Dec2Bin extends StatelessWidget {
                       ),
                     ),
                     // we raise a new event
-                    // TODO: Llama al metodo updateBinary del proveedor con un valor de 2.
+                    // TODO: OK Llama al metodo updateBinary del proveedor con un valor de 2.
                     // TODO-HINT: Usa Provider.of(context, listen:false)
-                    onPressed: () {},
+                    onPressed: () =>
+                        Provider.of<ConvertionModel>(context, listen: false)
+                            .updateDecimal(2),
                   ),
                 )),
                 Expanded(
@@ -81,9 +91,11 @@ class Dec2Bin extends StatelessWidget {
                       ),
                     ),
                     // we raise a new event
-                    // TODO: Llama al metodo updateBinary del proveedor con un valor de 3.
+                    // TODO: OK Llama al metodo updateBinary del proveedor con un valor de 3.
                     // TODO-HINT: Usa Provider.of(context, listen:false)
-                    onPressed: () {},
+                    onPressed: () =>
+                        Provider.of<ConvertionModel>(context, listen: false)
+                            .updateDecimal(3),
                   ),
                 )),
               ],
@@ -106,9 +118,11 @@ class Dec2Bin extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    // TODO: Llama al metodo updateBinary del proveedor con un valor de 4.
+                    // TODO: OK Llama al metodo updateBinary del proveedor con un valor de 4.
                     // TODO-HINT: Usa Provider.of(context, listen:false)
-                    onPressed: () {},
+                    onPressed: () =>
+                        Provider.of<ConvertionModel>(context, listen: false)
+                            .updateDecimal(4),
                   ),
                 )),
                 Expanded(
@@ -122,9 +136,11 @@ class Dec2Bin extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    // TODO: Llama al metodo updateBinary del proveedor con un valor de 5.
+                    // TODO: OK Llama al metodo updateBinary del proveedor con un valor de 5.
                     // TODO-HINT: Usa Provider.of(context, listen:false)
-                    onPressed: () {},
+                    onPressed: () =>
+                        Provider.of<ConvertionModel>(context, listen: false)
+                            .updateDecimal(5),
                   ),
                 )),
                 Expanded(
@@ -138,9 +154,11 @@ class Dec2Bin extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    // TODO: Llama al metodo updateBinary del proveedor con un valor de 6.
+                    // TODO: OK Llama al metodo updateBinary del proveedor con un valor de 6.
                     // TODO-HINT: Usa Provider.of(context, listen:false)
-                    onPressed: () {},
+                    onPressed: () =>
+                        Provider.of<ConvertionModel>(context, listen: false)
+                            .updateDecimal(6),
                   ),
                 )),
               ],
@@ -163,9 +181,11 @@ class Dec2Bin extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    // TODO: Llama al metodo updateBinary del proveedor con un valor de 7.
+                    // TODO: OK Llama al metodo updateBinary del proveedor con un valor de 7.
                     // TODO-HINT: Usa Provider.of(context, listen:false)
-                    onPressed: () {},
+                    onPressed: () =>
+                        Provider.of<ConvertionModel>(context, listen: false)
+                            .updateDecimal(7),
                   ),
                 )),
                 Expanded(
@@ -179,9 +199,11 @@ class Dec2Bin extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    // TODO: Llama al metodo updateBinary del proveedor con un valor de 8.
+                    // TODO: OK Llama al metodo updateBinary del proveedor con un valor de 8.
                     // TODO-HINT: Usa Provider.of(context, listen:false)
-                    onPressed: () {},
+                    onPressed: () =>
+                        Provider.of<ConvertionModel>(context, listen: false)
+                            .updateDecimal(8),
                   ),
                 )),
                 Expanded(
@@ -195,9 +217,11 @@ class Dec2Bin extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    // TODO: Llama al metodo updateBinary del proveedor con un valor de 9.
+                    // TODO: OK Llama al metodo updateBinary del proveedor con un valor de 9.
                     // TODO-HINT: Usa Provider.of(context, listen:false)
-                    onPressed: () {},
+                    onPressed: () =>
+                        Provider.of<ConvertionModel>(context, listen: false)
+                            .updateDecimal(9),
                   ),
                 )),
               ],
@@ -215,9 +239,11 @@ class Dec2Bin extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(horizontal: 4.0),
                       child: MaterialButton(
                         color: Theme.of(context).colorScheme.secondary,
-                        // TODO: Llama al metodo reset del proveedor.
+                        // TODO: OK Llama al metodo reset del proveedor.
                         // TODO-HINT: Usa Provider.of(context, listen:false)
-                        onPressed: () {},
+                        onPressed: () =>
+                            Provider.of<ConvertionModel>(context, listen: false)
+                                .reset(),
                         child: const Text(
                           "Reset",
                           style: TextStyle(
@@ -239,9 +265,11 @@ class Dec2Bin extends StatelessWidget {
                             color: Colors.white,
                           ),
                         ),
-                        // TODO: Llama al metodo updateBinary del proveedor con un valor de 0.
+                        // TODO: OK Llama al metodo updateBinary del proveedor con un valor de 0.
                         // TODO-HINT: Usa Provider.of(context, listen:false)
-                        onPressed: () {},
+                        onPressed: () =>
+                            Provider.of<ConvertionModel>(context, listen: false)
+                                .updateDecimal(0),
                       ),
                     )),
               ],

@@ -6,6 +6,9 @@ import 'domain/models/provider/convertion_model.dart';
 void main() {
   runApp(
     // TODO: En lugar de usar App agrega un ChangeNotifierProvider usando ConvertionModel
-    const App(),
+    ChangeNotifierProvider(
+      create: (context) => ConvertionModel(),
+      child: const App(),
+    ),
   );
 }
